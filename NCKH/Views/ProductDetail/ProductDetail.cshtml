@@ -20,37 +20,40 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="product__details__text">
+                    <input type="hidden" id="productId" value="@Model.MaSanPhamChiTiet" />
+
                     <h3>@Model.TenSanPham</h3>
                     <div class="product__details__rating">
                         @for (int i = 0; i < Model.Rate; i++)
                         {
                             <i class="fa fa-star"></i>
                         }
-                        @for (int i = Model.Rate; i < 5; i++)
-                        {
-                            <i class="fa fa-star-o"></i>
-                        }
+                     
                     </div>
-                    <div class="product__details__price">@Model.Gia.ToString("C")</div>
+                    <div class="product__details__price">
+                    </div>
                     <p>@Model.MoTa</p>
 
                     <div class="product__details__size">
-                        <p>Chọn màu</p>
-                        <ul>
+                        <p></p>
+                        <ul class="size-list">
                             @foreach (var size in Model.SanPhamSizes)
                             {
-                                <li>@size.Size - @size.SoLuong in stock</li>
+                                <li>
+                                    <input type="radio" id="size_@size.Size" name="productSize" value="@size.Size" hidden>
+                                    <label for="size_@size.Size">@size.Size</label>
+                                </li>
                             }
                         </ul>
                     </div>
                     <div class="product__details__quantity">
                         <div class="quantity">
                             <div class="pro-qty">
-                                <input type="text" value="1">
+                                <input type="text" value="1" min ="1">
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn">Thêm vào giỏ hàng</a>
+                    <button type="button" id="addToCartBtn" class="primary-btn">Thêm vào giỏ hàng</button>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                     <ul>
                        
@@ -70,4 +73,39 @@
         </div>
     </div>
 </section>
+<script>
+    <script>
+        $(document).ready(function () {
+            $("#addToCartBtn").click(function () {
+                var productId = $("#productId").val();
+                var size = $("input[name='productSize']:checked").val();
+                var quantity = $("#quantity").val();
+
+                if (!size) {
+                    alert("Vui lòng chọn size trước khi thêm vào giỏ hàng!");
+                    return;
+                }
+
+                $.ajax({
+                    url: "/Cart/AddCart",
+                    type: "POST",
+                    data: { productId: productId, size: size, quantity: quantity },
+                    success: function (response) {
+                        if (response.success) {
+                            alert(response.message); 
+                        } else {
+                            alert("Lỗi: " + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra, vui lòng thử lại!");                    }
+                });
+            });
+        });
+</script>
+
+
+
+
+
 <!-- Product Details Section End -->

@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\BTL_LTW\\NCKH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\views\\home\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\views\\home\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\viewmodel\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\views\\productdetail\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\views\\productdetail\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\controllers\\productdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\controllers\\productdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|d:\\btl_ltw\\nckh\\nckh\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D477627-80E9-4CAB-8AB8-937194FB7FC3}|NCKH\\NCKH.csproj|solutionrelative:nckh\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,9 +29,48 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 143,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PayMentController.cs",
+              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\PayMentController.cs",
+              "RelativeDocumentMoniker": "NCKH\\Controllers\\PayMentController.cs",
+              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\PayMentController.cs",
+              "RelativeToolTip": "NCKH\\Controllers\\PayMentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:06:05.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartViewModel.cs",
+              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\ViewModel\\CartViewModel.cs",
+              "RelativeDocumentMoniker": "NCKH\\ViewModel\\CartViewModel.cs",
+              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\ViewModel\\CartViewModel.cs",
+              "RelativeToolTip": "NCKH\\ViewModel\\CartViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:05:54.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDetail.cshtml",
+              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\ProductDetail\\ProductDetail.cshtml",
+              "RelativeDocumentMoniker": "NCKH\\Views\\ProductDetail\\ProductDetail.cshtml",
+              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\ProductDetail\\ProductDetail.cshtml",
+              "RelativeToolTip": "NCKH\\Views\\ProductDetail\\ProductDetail.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T01:48:41.25Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -147,54 +194,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 257,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductDetail.cshtml",
-              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\Home\\ProductDetail.cshtml",
-              "RelativeDocumentMoniker": "NCKH\\Views\\Home\\ProductDetail.cshtml",
-              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\Home\\ProductDetail.cshtml",
-              "RelativeToolTip": "NCKH\\Views\\Home\\ProductDetail.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAEEAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T16:46:09.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductDetailController.cs",
               "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\ProductDetailController.cs",
               "RelativeDocumentMoniker": "NCKH\\Controllers\\ProductDetailController.cs",
               "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\ProductDetailController.cs",
               "RelativeToolTip": "NCKH\\Controllers\\ProductDetailController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBoAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T16:44:17.736Z",
+              "WhenOpened": "2025-03-31T01:43:41.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "NCKH\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "NCKH\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwB8AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T19:31:01.867Z"
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "NCKH\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\BTL_LTW\\NCKH\\NCKH\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "NCKH\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T01:48:57.396Z",
+              "EditorCaption": ""
             }
           ]
         }

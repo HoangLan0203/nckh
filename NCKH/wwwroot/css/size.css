@@ -1,0 +1,25 @@
+﻿.size-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+    .size-list li {
+        display: inline-block;
+    }
+
+    .size-list input[type="radio"]:checked + label {
+        background-color: black;
+        color: white;
+    }
+
+    .size-list label {
+        display: inline-block;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        text-align: center;
+        min-width: 40px;
+        border-radius: 5px;
+    }

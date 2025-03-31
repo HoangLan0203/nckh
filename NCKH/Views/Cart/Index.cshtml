@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutOgani.cshtml";
+}
+@model List<NCKH.ViewModel.CartViewModel>
+
+<!-- Shoping Cart Section Begin -->
+<section class="shoping-cart spad">
+    <div class="container">
+        @if (Model == null || !Model.Any())
+        {
+            <p class="text-center">Giỏ hàng của bạn đang trống.</p>
+            <div class="text-center">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Tiếp tục mua sắm</a>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="shoping__product">Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Size</th>
+                                    <th>Tổng</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="shoping__cart__item">
+                                            <img src="@Url.Content("~/Images/" + item.chiTietSanPham.HinhAnh)" alt="" width="100">
+                                            <h5>@item.chiTietSanPham.TenSanPham</h5>
+                                        </td>
+                                        <td class="shoping__cart__price">
+                                            $@item.chiTietSanPham.Gia.ToString("N0")
+                                        </td>
+                                        <td class="shoping__cart__quantity">
+                                            <div class="quantity">
+                                                <input type="number" value="@item.SoLuong" min="1" class="cart-quantity"
+                                                       data-id="@item.chiTietSanPham.MaSanPhamChiTiet" data-size="@item.Size">
+                                            </div>
+                                        </td>
+                                        <td>@item.Size</td>
+                                        <td class="shoping__cart__total">
+                                            $@(item.SoLuong * item.chiTietSanPham.Gia)
+                                        </td>
+                                        <td class="shoping__cart__item__close">
+                                            <a href="#" class="remove-cart-item" data-id="@item.chiTietSanPham.MaSanPhamChiTiet" data-size="@item.Size">
+                                                <span class="icon_close"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__btns">
+                        <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+                        <a href="#" class="primary-btn cart-btn cart-btn-right">
+                            <span class="icon_loading"></span>
+                            Update Cart
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="shoping__checkout">
+                        <h5>Tổng giỏ hàng</h5>
+                        <ul>
+                            <li>Tổng cộng <span>$@(Model.Sum(x => x.SoLuong * x.chiTietSanPham.Gia))</span></li>
+                        </ul>
+                        <a href="@Url.Action("Index", "Checkout")" class="primary-btn">Thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $(".cart-quantity").on("change", function () {
+            var productId = $(this).data("id");
+            var size = $(this).data("size");
+            var quantity = $(this).val();
+
+            if (quantity < 1) {
+                alert("Số lượng phải lớn hơn 0");
+                $(this).val(1);
+                return;
+            }
+
+            $.ajax({
+                url: '@Url.Action("UpdateCart", "Cart")',
+                type: 'POST',
+                data: { productId: productId, size: size, quantity: quantity },
+                success: function (response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert("Lỗi: " + response.message);
+                    }
+                },
+                error: function () {
+                    alert("Có lỗi xảy ra, vui lòng thử lại!");
+                }
+            });
+        });
+
+        $(document).on("click", ".remove-cart-item", function (e) {
+            e.preventDefault();
+            var productId = $(this).data("id");
+            var size = $(this).data("size");
+
+            $.ajax({
+                url: '@Url.Action("RemoveFromCart", "Cart")',
+                type: 'POST',
+                data: { productId: productId, size: size },
+                success: function (response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert("Lỗi: " + response.message);
+                    }
+                },
+                error: function () {
+                    alert("Có lỗi xảy ra, vui lòng thử lại!");
+                }
+            });
+        });
+    });
+</script>
